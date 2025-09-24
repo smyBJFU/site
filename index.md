@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "JIAQI SITE"
-  text: "A VitePress Site"
+  text: "VitePress Site SSG"
   tagline: My great project tagline
   actions:
     - theme: brand
