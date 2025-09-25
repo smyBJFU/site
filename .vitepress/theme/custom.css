@@ -1,0 +1,135 @@
+/**
+ * 两栏布局样式
+ * 将默认的三栏布局（左侧导航、内容、右侧大纲）改为两栏布局
+ * 左侧显示当前文章的目录，右侧为主内容区域
+ */
+
+/* 在大屏幕设备上应用两栏布局 */
+@media (min-width: 960px) {
+  /* 隐藏默认的左侧边栏 */
+  .VPSidebar {
+    display: none;
+  }
+
+  /* 设置容器的最大宽度，使内容居中 */
+  .VPDoc.has-aside .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 24px;
+  }
+
+  /* 左侧目录栏 - 使用order将大纲移到左侧 */
+  .VPDoc.has-aside .aside {
+    position: sticky;
+    top: calc(var(--vp-nav-height) + 24px);
+    height: fit-content;
+    min-width: 180px;
+    max-width: 220px;
+    padding: 16px;
+    border-right: 1px solid var(--vp-c-divider);
+    order: -1;
+  }
+
+  /* 主内容区域 */
+  .VPDoc.has-aside .content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* 目录标题样式 */
+  .VPDocAside .outline-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--vp-c-text-1);
+  }
+
+  .VPDocAside .root {
+    margin: 0;
+    padding: 0;
+  }
+
+  .VPDocAside .root .outline-link {
+    font-size: 14px;
+    padding: 4px 0;
+    color: var(--vp-c-text-2);
+    text-decoration: none;
+    display: block;
+    transition: color 0.25s;
+  }
+
+  .VPDocAside .root .outline-link:hover {
+    color: var(--vp-c-brand-1);
+  }
+
+  .VPDocAside .root .outline-link.active {
+    color: var(--vp-c-brand-1);
+    font-weight: 500;
+  }
+
+  /* 子级目录缩进 */
+  .VPDocAside .nested.outline-link {
+    padding-left: 16px;
+  }
+}
+
+/* 在更大屏幕上调整布局 */
+@media (min-width: 1280px) {
+  .VPDoc.has-aside .container {
+    max-width: 1500px;
+  }
+}
+
+/* 在超大屏幕上进一步调整 */
+@media (min-width: 1440px) {
+  .VPDoc.has-aside .container {
+    max-width: 1600px;
+  }
+}
+
+/* 特性卡片样式优化 */
+.VPFeatures {
+  padding: 60px 24px !important;
+}
+
+.VPFeature {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 32px 24px;
+}
+
+.VPFeature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-color: rgba(52, 152, 219, 0.3);
+}
+
+/* 特性标题样式 */
+.VPFeature .title {
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color: #2c3e50 !important;
+  margin-bottom: 16px !important;
+  text-align: center;
+}
+
+/* 特性详情样式 */
+.VPFeature .details {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: #7f8c8d !important;
+  text-align: center;
+}
+
+/* 图标样式优化 */
+.VPFeature .icon {
+  font-size: 2.5rem !important;
+  margin-bottom: 20px !important;
+  text-align: center;
+  color: #3498db;
+}
