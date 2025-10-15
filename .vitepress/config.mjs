@@ -21,6 +21,7 @@ export default defineConfig({
           { text: 'JAVA', link: '/JAVA' },
           { text: 'SpringBoot', link: '/SpringBoot' },
           { text: 'SpringCloud', link: '/SpringCloud' },
+          { text: '线程池', link: '/线程池' },
         ]
       },
       { text: '前端',
