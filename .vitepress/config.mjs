@@ -16,22 +16,35 @@ export default defineConfig({
     nav: [
 
       { text: '主页', link: '/' },
-      { text: 'JAVA WEB',
+      { text: 'JAVA',
         items: [
           { text: 'JAVA', link: '/JAVA' },
-          { text: 'SpringBoot', link: '/SpringBoot' },
-          { text: 'SpringCloud', link: '/SpringCloud' },
+          {text: 'JVM', link: '/JVM'},
+          { text: '并发', link: '/并发' },
           { text: '线程池', link: '/线程池' },
         ]
       },
-      { text: '前端',
+      { text: '框架',
         items: [
-          { text: 'nuxt.js', link: '/NuxtJS' },
-          { text: 'vue.js', link: '/VueJs' },
+          { text: 'SpringBoot', link: '/SpringBoot' },
+          { text: 'SpringCloud', link: '/SpringCloud' }
         ]
       },
-      { text: '八股文', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '中间件',
+        items: [
+          { text: 'Redis', link: '/redis' },
+          { text: '消息队列', link: '/消息队列' },
+          { text: 'Mysql', link: '/Mysql' },
+        ]
+      },
+      // { text: '前端',
+      //   items: [
+      //     { text: 'nuxt.js', link: '/NuxtJS' },
+      //     { text: 'vue.js', link: '/VueJs' },
+      //   ]
+      // },
+      // { text: '八股文', link: '/' },
+      // { text: 'Examples', link: '/markdown-examples' }
     ],
     // 广告配置
     // carbonAds: {
